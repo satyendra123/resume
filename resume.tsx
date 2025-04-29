@@ -144,11 +144,12 @@ Proactive Full Stack Developer with 2 years of experience and cross-domain exper
 
     \resumeSubheading
       {Houston System}{may 2023 -- Present}
-      {Texas A\&M University}{Greater Noida, U.P.}
+      {Software Engineer}{Greater Noida, U.P.}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Developed a REST API using Node js and My-SQL to store data from learning management systems}
+        \resumeItem{Developed a full-stack web application using Node.js, React, MySQL, and Docker, integrated with hardware components such as boom barriers, turnstiles, and tripods to build an access control system.}
+        \resumeItem{Gained hands-on experience with WebSocket, GraphQL, Apollo Client and Server, and Apache Kafka for implementing real-time communication and event-driven architecture.}
+        \resumeItem{Worked on real-time hardware integration using protocols such as TCP/IP, UDP, HTTP, WebSocket, RS-485 and REST API.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -161,15 +162,6 @@ Proactive Full Stack Developer with 2 years of experience and cross-domain exper
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
 
@@ -177,31 +169,44 @@ Proactive Full Stack Developer with 2 years of experience and cross-domain exper
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{PGS} $|$ \emph{Node, React, My-SQL, Docker}}{June 2020 -- Present}
+          {\textbf{Parking Guidace System} $|$ \emph{Node, React, My-SQL, Docker, Git}}{June 2023 -- January 2024}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Developed a full-stack web application using with Node serving a REST API with React as the frontend}
+            \resumeItem{Integrated parking sensors to detect vehicle presence, updating real-time slot occupancy status in the web interface}
+            \resumeItem{Displayed real-time parking availability (per floor) on a P10 LED display using sensor data.}
+            \resumeItem{Used Redis for asynchronous tasks}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{ANPR} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
+          
+ \resumeProjectHeading
+        {\textbf{Mullanpur Stadium Access Control System} $|$ \emph{Node, MySQL, Indexing, T20 machine }}{February 2024 -- August 2024}
+        \resumeItemListStart
+          \resumeItem{Designed and deployed an access control system across multiple gates in the Mullanpur Cricket Stadium for various categories including BCCI officials, Punjab Kings team members, service staff, and ticket holders.}
+          \resumeItem{Established an efficient ticket validation process by integrating QR and RFID scanners at entry points, leading to the processing of over 10,000 tickets per event with a 98 \% accuracy rate in validation.}
+          \resumeItem{Developed gate-level authorization logic—e.g., team gates exclusively allow Punjab Kings team cards; BCCI gates only allow BCCI officials.}
+          \resumeItem{Ensured real-time validation and access control by connecting scanning systems to a centralized Flask-based backend and MySQL database.}
+          \resumeItem{Optimized gate operations by ensuring that users are only allowed through gates based on their access type and ticket permissions.}
+        \resumeItemListEnd
 
 
               \resumeProjectHeading
-          {\textbf{ANPR} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          {\textbf{ANPR} $|$ \emph{Rest API Integratin, React, Redux, Talwind Css, GraphQL, Git}}{September 2024 -- December 2024}
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Built the frontend using React.js, Tailwind CSS, and TypeScript with distinct access levels—Admins can manage and edit records, while Operators have read-only access.}
+            \resumeItem{Integrated the system into a paid parking management solution using ANPR technology to automate entry and exit logging.}
+            \resumeItem{Implemented CI/CD using TravisCI to ensure reliable deployments and streamline development workflows.}
+            \resumeItem{Developed and consumed REST and GraphQL APIs to efficiently manage vehicle data, user roles, and access logs within the system.}
           \resumeItemListEnd
+
+    \resumeProjectHeading
+{\textbf{Houston System Company Website} $|$ \emph{React.js, Tailwind CSS, TypeScript, Rest API, Git}} {January 2025 -- Present}
+\resumeItemListStart
+  \resumeItem{Designed and developed a responsive and SEO-friendly company website for Houston System to showcase products, solutions, and services.}
+  \resumeItem{Built the frontend using React.js, Tailwind CSS, and TypeScript for a clean, modern, and mobile-friendly UI.}
+  \resumeItem{Created modular and reusable UI components to ensure consistency and ease of maintenance across the site.}
+  \resumeItem{Integrated backend services using Node.js and Express to manage contact forms, product data, content updates, and a chatbot for real-time customer interaction. Implemented WhatsApp chat integration to collect customer feedback directly through the website.}
+  \resumeItem{Set up version control and code collaboration via Git, ensuring streamlined development and peer reviews.}
+\resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
@@ -212,7 +217,7 @@ Proactive Full Stack Developer with 2 years of experience and cross-domain exper
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, C/C++, My-SQL, JavaScript, HTML/CSS} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, Django, Material-UI, Bootstrap, FastAPI} \\
+     \textbf{Frameworks}{: React, Node.js, Flask, Django, Material-UI, Bootstrap} \\
      \textbf{Developer Tools}{: Git, Docker, Kubernet, Dev-Ops, AWS Cloud Platform, VS Code, Visual Studio, PyCharm} \\
      \textbf{Libraries}{: pandas, NumPy, Matplotlib}
  \end{itemize}
