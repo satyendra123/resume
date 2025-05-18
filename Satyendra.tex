@@ -1,0 +1,228 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Satyendra Singh} \\ \vspace{1pt}
+    \small +91 9584224133 $|$ \href{mailto:singhsatyendra885@gmail.com}{\underline{singhsatyendra885@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/satyendra}} $|$
+    \href{https://github.com/...}{\underline{github.com/satyendra}}
+\end{center}
+
+
+%-----------Objective -----------
+\section{\textbf{Professional Summary}}
+Results-driven \textbf{Full Stack Developer} with 2 years of experience building web applications integrated with \textbf{IoT} and embedded systems. Expertise in developing scalable solutions using \textbf{Node.js}, \textbf{React}, and\textbf{ SQL databases}. Passionate about creating technology solutions that solve real-world problems with a focus on performance and user experience.
+
+
+%-----------EXPERIENCE-----------
+\section{\textbf{Professional Experience}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{}
+      {Houston System, Greater Noida, U.P.}{May 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Architected} and implemented a RESTful API using Node.js and MySQL that improved learning management system data storage efficiency by 40\%.}
+        \resumeItem{\textbf{Developed} a comprehensive access control system using Node.js, React, MySQL, and Docker, successfully integrating with physical hardware components including boom barriers, turnstiles, and tripods.}
+        \resumeItem{\textbf{Implemented} real-time communication architecture using WebSocket, GraphQL, and Apache Kafka, reducing system latency by 60\%.}
+        \resumeItem{\textbf{Engineered} hardware-software integrations using multiple protocols (TCP/IP, UDP, HTTP, WebSocket, RS-485) to create seamless connections between web applications and IoT devices.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{\textbf{Projects}}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Houston System Company Website} $|$ \emph{React.js, Tailwind CSS, TypeScript, REST API, Git}} {Jan 2025 -- Present}
+            \resumeItemListStart
+              \resumeItem{\textbf{Designed} and developed a responsive, SEO-optimized company website showcasing products and services.}
+              \resumeItem{\textbf{Built} modular UI components using React.js and Tailwind CSS, reducing development time for new features by 35\%.}
+              \resumeItem{\textbf{Implemented} WhatsApp integration for direct customer feedback, increasing customer engagement by 45\%.}
+              \resumeItem{\textbf{Engineered} backend services with Node.js and Express for contact forms, product data management, and real-time customer interaction via chatbot.}
+            \resumeItemListEnd
+
+        \resumeProjectHeading
+              {\textbf{Automatic Number Plate Recognition (ANPR)} $|$ \emph{RestAPI, React, GraphQL, Redux, Git}}{Sep 2024 -- Dec 2024}
+              \resumeItemListStart
+                \resumeItem{\textbf{Built} a role-based frontend interface using React.js, Tailwind CSS, and TypeScript with distinct admin and operator access levels.}
+                \resumeItem{\textbf{Integrated} ANPR technology with parking management systems, automating vehicle logging and reducing manual entry errors by 95\%.}
+                \resumeItem{\textbf{Implemented} CI/CD using TravisCI, decreasing deployment time by 70\% and eliminating deployment-related issues.}
+                \resumeItem{\textbf{Developed} GraphQL and REST APIs to efficiently manage vehicle data, user roles, and system access logs.}
+              \resumeItemListEnd
+
+        \resumeProjectHeading
+            {\textbf{Mullanpur Stadium Access Control System} $|$ \emph{Node.js, MySQL, Database Indexing}}{Feb 2024 -- Aug 2024}
+            \resumeItemListStart
+              \resumeItem{\textbf{Designed} and deployed a multi-gate access control system serving various user categories at Mullanpur Cricket Stadium.}
+              \resumeItem{\textbf{Engineered} a ticket validation system using QR and RFID scanners that processed 10,000+ tickets per event with 98\% accuracy.}
+              \resumeItem{\textbf{Developed} gate-level authorization logic ensuring precise access control based on user roles and permissions.}
+              \resumeItem{\textbf{Created} a centralized Flask-based backend with an optimized MySQL database for real-time validation.}
+            \resumeItemListEnd
+    
+        \resumeProjectHeading
+              {\textbf{Parking Guidace System} $|$ \emph{Node.js, React, MySQL, Docker, Git}}{June 2023 -- Jan 2024}
+              \resumeItemListStart
+                \resumeItem{\textbf{Developed} a full-stack application providing real-time parking availability information for multi-level parking facilities.}
+                \resumeItem{\textbf{Integrated} IoT parking sensors to detect vehicle presence with 99\% accuracy and update slot occupancy in real-time.}
+                \resumeItem{\textbf{Implemented} Redis for handling asynchronous tasks, reducing system load during peak usage by 50\%.}
+                \resumeItem{\textbf{Created} digital signage integration showing real-time availability data on P10 LED displays.}
+              \resumeItemListEnd
+
+
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Science, in Electronics}{}
+      {Lovely Professional University, Jalandhar, Punjab}{Aug. 2013 -- May 2018}
+    \resumeSubheading
+      {Higher Secondary Certificate}{}
+      {Aadarsh Sarvodaya Higher Secondary School, Anuppur, M.P.}{Aug. 2011 -- May 2012}
+    \resumeSubheading
+      {Secondary School Certificate}{}
+      {Aadarsh Sarvodaya High School, Anuppur, M.P.}{Aug. 2009 -- May 2010}
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages:}{JavaScript (ES6+), Python, C/C++, SQL, HTML5, CSS3} \\
+     \textbf{Frameworks \& Libraries:}{React.js, Node.js, Express.js, Flask, Django, Material UI, Bootstrap, Redux, Pandas, NumPy, Matplotlib} \\
+     \textbf{Developer Tools:}{Git, Docker, Kubernetes, AWS Cloud Platform, CI/CD (TravisCI)} \\
+     \textbf{Protocols \& APIs:}{REST, GraphQL, WebSocket, TCP/IP, UDP, HTTP, RS-485} \\
+     \textbf{Other Skills:}{IoT Integration, Embedded Systems, Access Control Systems, Real-Time Data Processing} \\
+     \textbf{Soft Skills:}{Problem Solving, Cross-Functional Collaboration, Technical Documentation, Project Management}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
