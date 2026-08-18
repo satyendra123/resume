@@ -8,6 +8,10 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{cmap}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
@@ -18,6 +22,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{iftex}
 \input{glyphtounicode}
 
 
@@ -47,6 +52,12 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
+\hypersetup{
+  pdftitle={Satyendra Singh - Full Stack Developer \& DevOps Engineer Resume},
+  pdfauthor={Satyendra Singh},
+  pdfsubject={Full Stack Developer and DevOps Engineer Resume},
+  pdfkeywords={Software Developer, Full Stack Developer, DevOps Engineer, React.js, React Native, Node.js, Django, MySQL, REST API, Docker, Kubernetes, AWS, Jenkins, Terraform, Ansible, CI/CD, GitHub, IoT}
+}
 
 \raggedbottom
 \raggedright
@@ -59,6 +70,9 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
+\ifPDFTeX
+  \pdfinterwordspaceon
+\fi
 
 %-------------------------
 % Custom commands
@@ -74,6 +88,16 @@
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
+}
+
+% Non-tabular variant to keep dates/location in the same reading-order
+% text line as the institution/degree, so ATS text extraction doesn't
+% split dates away from the rows they belong to.
+\newcommand{\resumeEduHeading}[4]{
+  \vspace{-2pt}\item
+    \textbf{#1} \hfill \textit{\small #2}\\
+    \textit{\small #3} \hfill \textit{\small #4}
+  \vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -92,7 +116,8 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemi}{-}
+\renewcommand\labelitemii{-}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -112,28 +137,30 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Satyendra Singh} \\ \vspace{1pt}
-    \small 
-    \href{https://wa.me/919584224133}{\underline{+91 9584224133}} $|$ 
-    \href{mailto:singhsatyendra885@gmail.com}{\underline{singhsatyendra885@gmail.com}} $|$ 
+    \textbf{\Huge \scshape Satyendra Singh} \\ \vspace{2pt}
+    \small \textbf{Full Stack Developer $|$ DevOps Engineer} \\ \vspace{1pt}
+    \small Greater Noida, Uttar Pradesh, India \\ \vspace{1pt}
+    \small
+    \href{https://wa.me/919584224133}{\underline{+91 9584224133}} $|$
+    \href{mailto:singhsatyendra885@gmail.com}{\underline{singhsatyendra885@gmail.com}} $|$
     \href{https://linkedin.com/in/satyendra}{\underline{linkedin.com/in/satyendra}} $|$
     \href{https://github.com/satyendra}{\underline{github.com/satyendra}}
 \end{center}
 
-%-----------Objective -----------
-\section{Objective}
-Full Stack Developer with 3+ years of experience in designing and developing scalable web and mobile applications using React.js, React Native, Node.js, Django, and modern JavaScript frameworks. Skilled in building end-to-end solutions across frontend, backend, APIs, and cloud-based deployments. Experienced in IoT and embedded systems integration, real-time communication, payment gateway integration, and enterprise-level access control systems. Proficient in delivering high-performance applications with a strong focus on user experience, system reliability, and product innovation.
+%-----------Summary -----------
+\section{Summary}
+Full Stack Developer and DevOps Engineer with 3+ years of experience designing, developing, and deploying scalable web and mobile applications using React.js, React Native, Node.js, Django, and modern JavaScript frameworks. Hands-on with DevOps tooling and practices including Docker, Kubernetes, AWS, Jenkins, Terraform CLI, Ansible, GitHub, and CI/CD pipelines for building, containerizing, and deploying end-to-end solutions across frontend, backend, APIs, and cloud infrastructure. Experienced in IoT and embedded systems integration, real-time communication, payment gateway integration, and enterprise-level access control systems. Proficient in delivering high-performance, reliable applications with a strong focus on automation, system reliability, and product innovation.
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeEduHeading
       {Lovely Professional University}{Jalandhar, Punjab}
-      {Bachelor of Science, in Electronics}{Aug. 2013 -- May 2018}
-    \resumeSubheading
+      {Bachelor of Technology in Electronics (B.Tech)}{Aug. 2013 -- May 2018}
+    \resumeEduHeading
       {Aadarsh Sarvodaya Higher Secondary School}{Anuppur, M.P.}
       {Science}{Aug. 2011 -- May 2012}
-    \resumeSubheading
+    \resumeEduHeading
       {Aadarsh Sarvodaya High School}{Anuppur, M.P.}
       {}{Aug. 2009 -- May 2010}
   \resumeSubHeadingListEnd
@@ -144,15 +171,15 @@ Full Stack Developer with 3+ years of experience in designing and developing sca
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Houston System}{may 2023 -- Present}
+      {Houston System}{May 2023 -- Present}
       {Software Engineer}{Greater Noida, U.P.}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using Node js and My-SQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Node.js, React, MySQL, and Docker, integrated with hardware components such as boom barriers, turnstiles, and tripods to build an access control system.}
-        \resumeItem{Gained hands-on experience with WebSocket, GraphQL, Apollo Client and Server, and Apache Kafka for implementing real-time communication and event-driven architecture.}
-        \resumeItem{Worked on real-time hardware integration using protocols such as TCP/IP, UDP, HTTP, WebSocket, RS-485 and REST API.}
+        \resumeItem{Engineered a REST API using Node.js and MySQL to ingest and store data from 5+ learning management systems, processing over 10,000 records daily.}
+        \resumeItem{Architected a full-stack access control system using Node.js, React, MySQL, and Docker, integrating hardware like boom barriers, turnstiles, and tripods over TCP/IP, UDP, HTTP, WebSocket, and RS-485, deployed across 15+ entry points and 20+ concurrent devices with sub-200ms response times for 1,000+ daily users.}
+        \resumeItem{Integrated WebSocket, GraphQL, Apollo Client and Server, and Apache Kafka for real-time communication and event-driven architecture, reducing data sync latency by approximately 40\%.}
+        \resumeItem{Built a complete CI/CD pipeline using GitHub, Jenkins, Docker, and Kubernetes to deploy on AWS infrastructure provisioned with Terraform CLI and Ansible, cutting manual deployment effort by approximately 60\%, with Prometheus and Grafana for CPU and system health monitoring.}
       \resumeItemListEnd
-      
+
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
 %     {Software Engineer I}{Oct 2014 - Sep 2016}
@@ -170,68 +197,65 @@ Full Stack Developer with 3+ years of experience in designing and developing sca
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Parking Guidace System} $|$ \emph{Node, React, My-SQL, Docker, Git}}{June 2023 -- January 2024}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Node serving a REST API with React as the frontend}
-            \resumeItem{Integrated parking sensors to detect vehicle presence, updating real-time slot occupancy status in the web interface}
-            \resumeItem{Displayed real-time parking availability (per floor) on a P10 LED display using sensor data.}
-            \resumeItem{Used Redis for asynchronous tasks}
-          \resumeItemListEnd
-          
- \resumeProjectHeading
-        {\textbf{Mullanpur Stadium Access Control System} $|$ \emph{Node, MySQL, Indexing, T20 machine }}{February 2024 - August 2024}
-        \resumeItemListStart
-          \resumeItem{Designed and deployed an access control system across multiple gates in the Mullanpur Cricket Stadium for various categories including BCCI officials, Punjab Kings team members, service staff, and ticket holders.}
-          \resumeItem{Established an efficient ticket validation process by integrating QR and RFID scanners at entry points, leading to the processing of over 10,000 tickets per event with a 98 \% accuracy rate in validation.}
-          \resumeItem{Developed gate-level authorization logic—e.g., team gates exclusively allow Punjab Kings team cards; BCCI gates only allow BCCI officials.}
-          \resumeItem{Ensured real-time validation and access control by connecting scanning systems to a centralized Flask-based backend and MySQL database.}
-          \resumeItem{Optimized gate operations by ensuring that users are only allowed through gates based on their access type and ticket permissions.}
-        \resumeItemListEnd
-
-
-\resumeProjectHeading
-{\textbf{Intelligent Toll Management System} $|$ \emph{React.js, Redux Toolkit, Node.js, MySQL, REST API, ANPR}}{November 2025 - April 2026}
+{\textbf{Intelligent Toll Management System} $|$ \emph{React.js, Redux Toolkit, Node.js, MySQL, ANPR}}{Nov 2025 - Apr 2026}
 \resumeItemListStart
-  \resumeItem{Developed a large-scale intelligent toll management system for an 8-lane toll plaza, consisting of 4 upward-direction lanes and 4 downward-direction lanes, enabling seamless vehicle movement and automated toll collection.}
-  
-  \resumeItem{Built responsive and real-time frontend modules using React.js and Redux Toolkit for centralized lane monitoring, transaction tracking, and operator management.}
-  
-  \resumeItem{Integrated Airtel Payments Bank FASTag services to process vehicle toll transactions in real time by securely sending FASTag data to banking APIs for validation, balance deduction, and transaction authorization.}
-  
-  \resumeItem{Implemented automated gate control logic where boom barriers open instantly upon successful FASTag verification and payment confirmation, significantly reducing vehicle waiting time.}
-  
-  \resumeItem{Integrated multiple hardware systems including ANPR cameras, AVCC systems, lane displays, RFID readers, handheld ticketing devices, and boom barriers to enable synchronized toll operations and real-time monitoring.}
-  
-  \resumeItem{Developed RESTful backend services using Node.js and MySQL to manage lane data, transaction records, vehicle logs, operator activities, and hardware communication across the toll infrastructure.}
-  
-  \resumeItem{Enhanced operational efficiency by implementing real-time device communication, centralized monitoring dashboards, and automated vehicle identification workflows for high-volume traffic handling.}
+  \resumeItem{Architected a large-scale intelligent toll management system for an 8-lane toll plaza, consisting of 4 upward-direction lanes and 4 downward-direction lanes, enabling seamless vehicle movement and streamlined toll collection.}
+
+  \resumeItem{Crafted responsive and real-time frontend modules using React.js and Redux Toolkit for centralized lane monitoring, transaction tracking, and operator management.}
+
+  \resumeItem{Incorporated Airtel Payments Bank FASTag services to process vehicle toll transactions in real time by securely sending FASTag data to banking APIs for validation, balance deduction, and transaction authorization.}
+
+  \resumeItem{Designed automatic gate control logic where boom barriers open instantly upon successful FASTag verification and payment confirmation, significantly reducing vehicle waiting time.}
+
+  \resumeItem{Unified multiple hardware systems including ANPR cameras, AVCC systems, lane displays, RFID readers, handheld ticketing devices, and boom barriers to enable synchronized toll operations and real-time monitoring.}
+
+  \resumeItem{Created RESTful backend services using Node.js and MySQL to manage lane data, transaction records, vehicle logs, operator activities, and hardware communication across the toll infrastructure.}
+
+  \resumeItem{Enhanced operational efficiency by implementing real-time device communication, centralized monitoring dashboards, and streamlined vehicle identification workflows for high-volume traffic handling.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://houstonsystem.com}{Houston System Company Website}} $|$ \emph{React.js, Tailwind CSS, TypeScript, REST API, Git}} 
-{September 2024 -- March 2025}
-
+{\textbf{Smart Control Mobile Application} $|$ \emph{React Native, Node.js, MQTT, WiFi, Bluetooth}}{June 2025 -- October 2025}
 \resumeItemListStart
-  \resumeItem{Designed and developed a responsive and SEO-friendly company website for Houston System to showcase products, solutions, and services.}
-  \resumeItem{Built the frontend using React.js, Tailwind CSS, and TypeScript for a clean, modern, and mobile-friendly UI.}
+  \resumeItem{Engineered a cross-platform mobile application using React Native for real-time monitoring and control of 50+ connected IoT devices over WiFi.}
+  \resumeItem{Enabled MQTT-based communication between the mobile application and ESP32-based controllers, achieving device response times under 200ms for low-latency control.}
+  \resumeItem{Planned room-wise device management across 10+ rooms with live status synchronization and remote access functionality.}
+  \resumeItem{Combined secure authentication and cloud connectivity using Firebase and REST APIs, supporting 100+ registered users for remote access and user management.}
+  \resumeItem{Delivered a scalable IoT architecture supporting 50+ connected devices with real-time communication and under 1\% message loss.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Smart Parking Management System} $|$ \emph{React.js, Node.js, MySQL, Redis, Kafka, AWS}}{Sep 2024 - March 2025}
+\resumeItemListStart
+  \resumeItem{Developed a full-stack parking management system supporting 500+ subscribed vehicles, using React.js and Tailwind CSS, and integrating boom barriers and P10 LED displays with the Node.js/MySQL backend over TCP/IP on an HTTPS/SSL-secured server.}
+  \resumeItem{Designed subscription-aware FASTag billing logic---active subscribers were exempted from deductions while non-subscribers were auto-charged---via Airtel Payments Bank FASTag integration and real-time payment webhooks.}
+  \resumeItem{Leveraged Apache Kafka and Redis for event-driven, low-latency processing, with sockets enabling real-time bi-directional communication between hardware devices and the backend for instant barrier control.}
+  \resumeItem{Automated reconciliation of pending FASTag transactions via a daily scheduled job that queries the bank API for deduction status, ensuring accurate subscription-based billing.}
+  \resumeItem{Containerized and deployed the application through a Jenkins-driven CI/CD pipeline on Kubernetes, with AWS infrastructure provisioned via Terraform CLI and Ansible for automated, zero-downtime releases.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Mullanpur Stadium Access Control System} $|$ \emph{Node, MySQL, Indexing, T20 machine}}{Feb 2024 - Aug 2024}
+\resumeItemListStart
+  \resumeItem{Planned and deployed an access control system across multiple gates in the Mullanpur Cricket Stadium for various categories including BCCI officials, Punjab Kings team members, service staff, and ticket holders.}
+  \resumeItem{Implemented an efficient ticket validation process by pairing QR and RFID scanners at entry points, leading to the processing of over 10,000 tickets per event with a 98\% accuracy rate in validation.}
+  \resumeItem{Defined gate-level authorization logic---e.g., team gates exclusively allow Punjab Kings team cards; BCCI gates only allow BCCI officials.}
+  \resumeItem{Ensured real-time validation and access control by connecting scanning systems to a centralized Flask-based backend and MySQL database.}
+  \resumeItem{Optimized gate operations by ensuring that users are only allowed through gates based on their access type and ticket permissions.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://houstonsystem.com}{Houston System Company Website}} $|$ \emph{React.js, Tailwind CSS, TypeScript, cPanel, Git}}{June 2023 -- January 2024}
+\resumeItemListStart
+  \resumeItem{Delivered a responsive and SEO-friendly company website for Houston System to showcase products, solutions, and services.}
+  \resumeItem{Implemented the frontend using React.js, Tailwind CSS, and TypeScript for a clean, modern, and mobile-friendly UI.}
   \resumeItem{Created modular and reusable UI components to ensure consistency and ease of maintenance across the site.}
-  \resumeItem{Integrated backend services using Node.js and Express to manage contact forms, product data, content updates, and a chatbot for real-time customer interaction. Implemented WhatsApp chat integration to collect customer feedback directly through the website.}
-  \resumeItem{Set up version control and code collaboration via Git, ensuring streamlined development and peer reviews.}
-\resumeItemListEnd
-
-
-\resumeProjectHeading
-{\textbf{Smart Control Mobile Application} $|$ \emph{React Native, Node.js, MQTT, ESP32, WiFi, Firebase}}{ June 2025 -- October 2025}
-\resumeItemListStart
-  \resumeItem{Developed a cross-platform mobile application using React Native for real-time monitoring and control of IoT devices over WiFi.}
-  \resumeItem{Implemented MQTT-based communication between the mobile application and ESP32-based controllers for low-latency device control.}
-  \resumeItem{Designed room-wise device management with real-time status synchronization and remote access functionality.}
-  \resumeItem{Integrated secure authentication and cloud connectivity using Firebase and REST APIs for remote access and user management.}
-  \resumeItem{Built a scalable IoT architecture supporting multiple connected devices and real-time communication.}
+  \resumeItem{Connected backend services using Node.js and Express to manage contact forms, product data, content updates, and a chatbot for real-time customer interaction. Rolled out WhatsApp chat integration to collect customer feedback directly through the website.}
+  \resumeItem{Configured version control and code collaboration workflows via Git, ensuring streamlined development and peer reviews.}
+  \resumeItem{Purchased and configured the company domain and deployed the production website via cPanel hosting, managing DNS records, SSL, and file deployment for a live public-facing site.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-    \resumeSubHeadingListEnd
 
 
 
@@ -241,10 +265,13 @@ Full Stack Developer with 3+ years of experience in designing and developing sca
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C/C++, My-SQL, JavaScript,Typescript,HTML/CSS} \\
-     \textbf{Frameworks}{: React, Node.js, React Native,Flask, Django, Material-UI, Bootstrap} \\
-     \textbf{Developer Tools}{: Git, Docker, Kubernet, Dev-Ops, AWS Cloud Platform, VS Code, Visual Studio, PyCharm} \\
+     \textbf{Languages}{: Python, C/C++, MySQL, JavaScript, TypeScript, Flutter, HTML/CSS} \\
+     \textbf{Frameworks}{: React.js, Node.js, React Native, Angular, Flask, Django, Material-UI, Bootstrap, Tailwind CSS} \\
+     \textbf{DevOps \& Cloud}{: GitHub, Docker, Kubernetes, AWS (EC2, S3, IAM), Jenkins, Terraform CLI, Ansible, CI/CD, Prometheus, Grafana} \\
+     \textbf{Messaging \& Real-Time}{: Apache Kafka, Redis, Socket.io, WebSocket, Webhooks, GraphQL, MQTT} \\
+     \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm} \\
      \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
  \end{itemize}
 
 
